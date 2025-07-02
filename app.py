@@ -60,7 +60,7 @@ def index():
             # Filter matching data
             filtered = df[
                 (df['Paper'] == paper) &
-                (df['Score'].between(score_input - 5, score_input + 5))
+                (df['Score'] <= score_input)
             ]
 
             if category != 'ALL':
